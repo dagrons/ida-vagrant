@@ -1,5 +1,8 @@
 准备用来搭建一个基于IDA Pro的恶意代码静态特征提取平台
 
+## TODO
+- 创建预装IDA的base box
+
 ## Important Concepts
 1. box: like image for docker
 2. provision: a set of actions for running box to execute and generate new box
