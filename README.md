@@ -1,3 +1,5 @@
+准备用来搭建一个基于IDA Pro的恶意代码静态特征提取平台
+
 ## Important Concepts
 1. box: like image for docker
 2. provision: a set of actions for running box to execute and generate new box
@@ -30,4 +32,8 @@ vagrant box add dagrons/windows10 Win10x64.box # 添加到box list
 **关于网络**
 
 搜索Proxy Setting, 然后在里面设置号好IP和端口就好了
+
+**关于一些无法用choco安装的软件**
+
+如果不能用answerfile, 就只好自己定制base box, 然后基于定制的box编写Vagrantfile
 

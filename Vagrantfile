@@ -17,6 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "./templates/ida_7.0/ida_7.0.zip", destination: "ida_7.0.zip"  # copy file to Documents
   config.vm.provision "shell", inline: "Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"  
   config.vm.provision "shell", inline: "choco install -y 7zip.install git visualstudiocode microsoft-windows-terminal -y"  
+  config.vm.provision "shell", path: "./scripts/add_idapython_to_path.ps1" 
 
 
   # Disable automatic box update checking. If you disable this, then
@@ -37,7 +38,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.10"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
