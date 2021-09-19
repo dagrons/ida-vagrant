@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))"  
   config.vm.provision "shell", inline: "choco install -y 7zip.install git visualstudiocode microsoft-windows-terminal -y"  
   config.vm.provision "shell", path: "./scripts/add_idapython_to_path.ps1" 
-
+  config.vm.provision "file", source: "./app", destination: "C:\\app"
 
 
   # Disable automatic box update checking. If you disable this, then

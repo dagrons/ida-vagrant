@@ -1,8 +1,29 @@
 准备用来搭建一个基于IDA Pro的恶意代码静态特征提取平台
 
+## Tree 
+```
+📦app 
+ ┣ 📂ida-scripts 
+ ┣ 📜execute_for_no_suffix.ps1
+ ┗ 📜main.py
+📦data # samples to be processed , the analysis result also stored there
+📦templates # templates files for app environment
+📦scripts # scripts for provisioning 
+```
+
 ## TODO
 - 创建预装IDA的base box
 
+## Usage
+1. batch processing mode
+   > copy all samples into a folder, and execute the following commands for the the folder
+   ```
+   C:\app\execute_for_no_suffix.ps1 <script_path> <data_folder>
+   ```
+2. service mode
+   ```
+
+   ```
 ## Important Concepts
 1. box: like image for docker
 2. provision: a set of actions for running box to execute and generate new box
