@@ -2,8 +2,7 @@
 
 ## Tree 
 ```
-📦app 
- ┣ 📂ida-scripts 
+📦app  
  ┣ 📜execute_for_no_suffix.ps1
  ┗ 📜main.py
 📦data # samples to be processed , the analysis result also stored there
